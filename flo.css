@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @media (max-width: 768px) {
+
+  }
+  
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    position: static;
+    flex-direction: column;
+}
+
+
+header {
+    background: url('https://thumbs.dreamstime.com/b/artistic-cappuccino-heart-shaped-latte-art-rustic-table-coffee-aesthetic-beverage-photography-captivating-image-302792465.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: static;
+    flex-direction: column;
+
+}
+
+header h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position:fixed;
+    flex-direction: row-reverse;
+  }
+header p {
+    font-size: 20px;
+    margin-top: 10px;
+    position:fixed;
+    flex-direction: column;
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-direction: column-reverse;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    
+}
+
+nav a:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+
+section {
+    padding: 50px 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p, ul {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    align-items: center;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+
+
+.parallax {
+    background: url('https://www.w3schools.com/w3images/coffee2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    color: white;
+    padding-top: 120px;
+    text-align:left;
+    align-items: left;
+        width: 1000px;
+        height: 10px;
+        background-color: rgb(115, 42, 13);
+        position: relative;
+        animation: moveRight 2s ease-in-out infinite;
+      }
+      
+      @keyframes moveRight {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: 200px;
+        }
+        100% {
+          left: 0;
+        }
+      }
+}
+
+.parallax h2 {
+    font-size: 50px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+}
+
+.carousel img {
+    width: 100%;
+    transition: transform 0.5s ease;
+    align-items: center;
+}
+
+.carousel:hover img {
+    transform: scale(1.1);
+}
+
+    nav a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    footer {
+        padding: 15px;
+
+    }
+    
+    @media (min-width: 481px) and (max-width: 1024px) { }

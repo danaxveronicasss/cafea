@@ -1,0 +1,90 @@
+<html>
+    <html lang="ro">
+        <link rel="stylesheet" href="eminescu.css">
+<head><meta charset="UTF-8">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/18438/18438782.png" type="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihai Eminescu</title>
+    
+    </head>
+    
+        <body>
+            <header>
+                <h1>Mihai Eminescu - Viața și Opera</h1>
+            </header>
+        
+            <section>
+                <h2>Despre Mihai Eminescu</h2>
+                <p>Mihai Eminescu (1850-1889) este considerat cel mai mare poet al literaturii române. A fost un poet, jurnalist și filozof, ale cărui lucrări au influențat profund cultura română. Eminescu este cunoscut pentru poeziile sale romantice, profund filosofice, și pentru preocupările sale legate de identitatea națională a României.</p>
+        
+                <p>Printre cele mai celebre lucrări ale sale se numără poeziile "Luceafărul", "Sara pe deal", "Dorința" și "Somnoroase păsărele". Eminescu a fost și un mare iubitor al naturii, iar multe dintre lucrările sale reflectă dragostea pentru peisajele din Moldova, locul său natal.</p>
+        
+                <p>De asemenea, Mihai Eminescu a fost un jurnalist activ, implicat în viața politică a vremii sale și susținător al ideilor progresiste.</p>
+            </section>
+        
+            <section class="quiz-container">
+                <h2>Chestionar despre Mihai Eminescu</h2>
+                <form id="quiz-form">
+                    <div class="question">
+                        <label for="q1">1. Care este data nașterii lui Mihai Eminescu?</label><br>
+                        <input type="date" id="q1" name="q1" required>
+                    </div>
+        
+                    <div class="question">
+                        <label for="q2">2. Care este cea mai cunoscută poezie a lui Mihai Eminescu?</label><br>
+                        <input type="text" id="q2" name="q2" required>
+                    </div>
+        
+                    <div class="question">
+                        <label for="q3">3. În ce oraș s-a născut Mihai Eminescu?</label><br>
+                        <input type="text" id="q3" name="q3" required>
+                    </div>
+        
+                    <div class="question">
+                        <label for="q4">4. Care a fost principalul subiect al operei lui Eminescu?</label><br>
+                        <input type="text" id="q4" name="q4" required>
+                    </div>
+        
+                    <button type="button" class="submit-btn" onclick="submitQuiz()">Trimite răspunsurile</button>
+                </form>
+        
+                <div id="result" class="result"></div>
+            </section>
+        
+            <script>
+                function submitQuiz() {
+                    var correctAnswers = {
+                        q1: '1850-01-15',
+                        q2: 'Luceafărul',
+                        q3: 'Botoșani',
+                        q4: 'dragostea, natura, filosofia'
+                    };
+                    
+                    var userAnswers = {
+                        q1: document.getElementById('q1').value,
+                        q2: document.getElementById('q2').value,
+                        q3: document.getElementById('q3').value,
+                        q4: document.getElementById('q4').value
+                    };
+                    
+                    var score = 0;
+                    for (var key in correctAnswers) {
+                        if (userAnswers[key].toLowerCase().trim() == correctAnswers[key].toLowerCase().trim()) {
+                            score++;
+                        }
+                    }
+                    
+                    var resultMessage = 'Ai răspuns corect la ' + score + ' din 4 întrebări.';
+                    if (score === 4) {
+                        resultMessage += ' Felicitări!';
+                    } else if (score >= 2) {
+                        resultMessage += ' Continuă să înveți mai multe despre Eminescu!';
+                    } else {
+                        resultMessage += ' Încearcă din nou!';
+                    }
+        
+                    document.getElementById('result').innerText = resultMessage;
+                }
+            </script>
+    </body>
+    </html>
